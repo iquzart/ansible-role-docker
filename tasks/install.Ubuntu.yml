@@ -1,0 +1,59 @@
+---
+- name: Install Ubuntu | Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: "600"
+  tags:
+    - install
+    - packages
+
+- name: Install Ubuntu | Clean up any previous installation
+  apt:
+    name:
+      - docker
+      - docker-engine
+      - docker.io
+      - containerd
+      - runc
+    state: absent
+  tags:
+    - install
+    - uninstall-docker
+    - packages
+
+- name: Install Ubuntu | Install gpg-agent
+  apt:
+    name: gpg-agent
+    state: present
+  tags:
+    - install
+    - packages
+
+- name: Install Ubuntu | GPG key for Docker CE
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+  tags:
+    - install
+    - packages
+
+- name: Install Ubuntu | Adding Docker CE Apt Repo
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+    state: present
+    filename: "docker-ce-stable"
+    update_cache: yes
+  tags:
+    - install
+    - packages
+
+- name: Install Ubuntu | Install Docker CE packages
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+  notify: docker restart
+  tags:
+    - install
+    - packages

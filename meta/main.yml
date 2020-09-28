@@ -1,0 +1,21 @@
+galaxy_info:
+  role_name: docker
+  author: Muhammed Iqbal
+  description: Install docker and docker compose
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: EL
+      versions:
+        - 8
+        - 7
+    - name: Ubuntu
+      versions:
+        - Focal
+        - Disco
+        - Bionic
+  galaxy_tags:
+    - docker
+    - compose
+    - containers
+dependencies: []

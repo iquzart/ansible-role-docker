@@ -1,0 +1,15 @@
+---
+# handlers file for ansible-role-docker
+
+- name: docker restart
+  systemd:
+    name: docker
+    state: restarted
+    enabled: true
+
+- name: reboot
+  reboot:
+    reboot_timeout: 3600
+
+- name: update grub
+  command: update-grub2

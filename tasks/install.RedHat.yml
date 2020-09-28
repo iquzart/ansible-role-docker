@@ -1,0 +1,41 @@
+---
+- name: Install RedHat | Clean up any previous installation
+  yum:
+    name:
+      - docker
+      - docker-client
+      - docker-client-latest
+      - docker-common
+      - docker-latest
+      - docker-latest-logrotate
+      - docker-logrotate
+      - docker-engine
+    state: absent
+  tags:
+    - install
+    - uninstall-docker
+    - packages
+
+- name: Setup Repository | Configure repository for Docker CE Stable
+  yum_repository:
+    name: docker-ce-stable
+    description: "Docker CE Stable - $basearch"
+    baseurl: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/{{ ansible_distribution_major_version }}/$basearch/stable"
+    gpgcheck: true
+    gpgkey: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+  tags:
+    - install
+    - repository
+    - packages
+
+- name: Install RedHat | Install Docker CE packages
+  yum:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
+  notify: docker restart
+  tags:
+    - install
+    - packages

@@ -1,0 +1,24 @@
+---
+- name: Check if grub swap limit capabilities
+  lineinfile:
+    state: absent
+    dest: /etc/default/grub
+    regexp: '^GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"'
+  check_mode: true
+  changed_when: false
+  register: status_swap_limit
+  tags:
+    - skip_in_molecule
+
+
+- name: debian | setting grub swap limit capabilities
+  lineinfile:
+    dest: /etc/default/grub
+    regexp: "^GRUB_CMDLINE_LINUX"
+    line: 'GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"'
+    backrefs: yes
+  register: grub_updated
+  when: status_swap_limit.found == 0
+  notify: update grub
+  tags:
+    - skip_in_molecule
