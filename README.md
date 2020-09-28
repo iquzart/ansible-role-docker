@@ -1,7 +1,7 @@
-Role Name
+Ansible Docker Engine
 =========
 
-A brief description of the role goes here.
+Ansible role for docker engine setup
 
 Requirements
 ------------
