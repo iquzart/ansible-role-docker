@@ -7,9 +7,8 @@ Ansible role for docker community edition setup
 Features
 ---------
 ```
-  1. Support for CentOS.
-  2. Support for Ubuntu.
-  3. Create a user account with docker access.
+  1. Support CentOS, Ubuntu, Debian.
+  2. Create a user account with docker access.
 ```
 Role Variables
 --------------
