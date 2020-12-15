@@ -1,5 +1,5 @@
 ---
-- name: User | Creating users with docker access
+- name: Creating users with docker access
   user:
     name: "{{ user_name }}"
     state: present

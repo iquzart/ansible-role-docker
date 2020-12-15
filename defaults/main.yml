@@ -4,3 +4,5 @@
 user_name: appadmin
 user_comment: "Application Admin"
 user_password: "p@ssw0rd"
+
+destro: "{{ ansible_distribution }}"

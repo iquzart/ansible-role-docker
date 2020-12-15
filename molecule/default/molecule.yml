@@ -18,6 +18,13 @@ platforms:
     command: "/lib/systemd/systemd"
     privileged: true
     pre_build_image: true
+  - name: debian10
+    image: geerlingguy/docker-debian10-ansible
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    command: "/lib/systemd/systemd"
+    privileged: true
+    pre_build_image: true
 provisioner:
   name: ansible
   config_options:

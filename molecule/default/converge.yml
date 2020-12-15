@@ -1,7 +1,10 @@
 ---
 - name: Converge
-  hosts: all
+  hosts: 
+    - ubuntu2004
+    - debian10
+    #- centos8
   tasks:
-    - name: "Include ansible-role-docker"
+    - name: "Include docker"
       include_role:
         name: "ansible-role-docker"

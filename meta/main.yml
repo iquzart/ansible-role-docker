@@ -14,6 +14,10 @@ galaxy_info:
         - Focal
         - Disco
         - Bionic
+    - name: Debian
+      versions:
+        - 10
+        - 9
   galaxy_tags:
     - docker
     - compose
