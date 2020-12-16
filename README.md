@@ -1,8 +1,8 @@
 Ansible Docker Role
 =========
 
-[![Molecule Test]](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?) 
-[![Molecule Test - Development]](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?branch=development) 
+![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?) 
+![Molecule Test - Development](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?branch=development) 
 [![License](https://img.shields.io/:license-mit-blue.svg)](https://badges.mit-license.org)
 
 
