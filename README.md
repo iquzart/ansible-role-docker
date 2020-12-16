@@ -8,12 +8,14 @@ Ansible Docker Role
 Ansible role for docker community edition setup
 
 
-Features
----------
-```
-  1. Support CentOS, Ubuntu, Debian.
-  2. Create a user account with docker access.
-```
+Support Matrix
+--------------
+| Distro | Version |
+| --- | --- |
+| Centos | 8 | 
+| Ubuntu |  20.04 LTS | 
+| Debian | 10 | 
+
 Role Variables
 --------------
 
@@ -30,13 +32,6 @@ Example Playbook
     - hosts: servers
       roles:
         - ansible-role-docker
-```
-
-To-Do
-------
-```
-1. Docker Compose
-2. Docker Logs
 ```
 
 License
