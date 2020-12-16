@@ -10,5 +10,5 @@ jobs:
       - name: Molecule
         uses: monolithprojects/action-molecule@v1.3.0
         with:
-          molecule_command: check
+          molecule_command: test
           scenario: default
