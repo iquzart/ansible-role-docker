@@ -16,8 +16,8 @@ galaxy_info:
         - Bionic
     - name: Debian
       versions:
-        - 10
-        - 9
+        - buster
+        - stretch
   galaxy_tags:
     - docker
     - compose
