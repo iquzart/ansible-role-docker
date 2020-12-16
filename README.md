@@ -1,5 +1,10 @@
-Ansible Docker Engine
+Ansible Docker Role
 =========
+
+Master: ![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?branch=master)
+
+Development: ![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?branch=development)
+
 
 Ansible role for docker community edition setup
 
@@ -7,9 +12,8 @@ Ansible role for docker community edition setup
 Features
 ---------
 ```
-  1. Support for CentOS.
-  2. Support for Ubuntu.
-  3. Create a user account with docker access.
+  1. Support CentOS, Ubuntu, Debian.
+  2. Create a user account with docker access.
 ```
 Role Variables
 --------------

@@ -1,5 +1,5 @@
 ---
-- name: Install RedHat | Clean up any previous installation
+- name: RedHat | Clean up any previous installation
   yum:
     name:
       - docker
@@ -16,7 +16,7 @@
     - uninstall-docker
     - packages
 
-- name: Setup Repository | Configure repository for Docker CE Stable
+- name: RedHat | Configure repository for Docker CE Stable
   yum_repository:
     name: docker-ce-stable
     description: "Docker CE Stable - $basearch"
@@ -28,7 +28,7 @@
     - repository
     - packages
 
-- name: Install RedHat | Install Docker CE packages
+- name: RedHat | Install Docker CE packages
   yum:
     name:
       - docker-ce
