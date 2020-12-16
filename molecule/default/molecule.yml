@@ -5,21 +5,21 @@ driver:
   name: docker
 platforms:
   - name: centos8
-    image: geerlingguy/docker-centos8-ansible
+    image: diquzart/ansible-systemd-centos
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     command: "/lib/systemd/systemd"
     privileged: true
     pre_build_image: true
   - name: ubuntu2004
-    image: geerlingguy/docker-ubuntu2004-ansible
+    image: diquzart/ansible-systemd-ubuntu
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     command: "/lib/systemd/systemd"
     privileged: true
     pre_build_image: true
   - name: debian10
-    image: geerlingguy/docker-debian10-ansible
+    image: diquzart/ansible-systemd-debian
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     command: "/lib/systemd/systemd"
