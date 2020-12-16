@@ -1,9 +1,8 @@
 Ansible Docker Role
 =========
-
-Master: ![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?branch=master)
-
-Development: ![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?branch=development)
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-iquzart.docker-blue)](https://galaxy.ansible.com/iquzart/docker)
+![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?) 
+[![License](https://img.shields.io/:license-mit-blue.svg)](https://badges.mit-license.org)
 
 
 Ansible role for docker community edition setup
