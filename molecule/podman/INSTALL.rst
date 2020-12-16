@@ -1,11 +1,11 @@
 *******
-Docker driver installation guide
+Podman driver installation guide
 *******
 
 Requirements
 ============
 
-* Docker Engine
+* Podman Engine
 
 Install
 =======
