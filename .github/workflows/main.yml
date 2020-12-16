@@ -1,21 +1,14 @@
 name: Molecule Test
 on: [push]
 jobs:
-  build:
+  molecule:
     runs-on: ubuntu-latest
-    env:
-      ANSIBLE_CALLBACK_WHITELIST: profile_tasks
-  
     steps:
-      - uses: actions/checkout@v1
-      - name: Set up Python 3
-        uses: actions/setup-python@v1
+      - uses: actions/checkout@v2
         with:
-          python-version: '3.x'
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install molecule docker testinfra
-      - name: Test with molecule
-        run: |
-          molecule test
+          path: "${{ github.repository }}"
+      - name: Molecule
+        uses: monolithprojects/action-molecule@v1.3.0
+        with:
+          molecule_command: check
+          scenario: default
