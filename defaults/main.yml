@@ -4,3 +4,8 @@
 user_name: appadmin
 user_comment: "Application Admin"
 user_password: "p@ssw0rd"
+
+
+# Docker Compose
+install_docker_compose: True
+docker_compose_version: 1.27.4

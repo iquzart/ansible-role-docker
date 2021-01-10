@@ -11,3 +11,6 @@
   when: ansible_os_family == "Debian"
 
 - include: config.users.yml
+
+- include: install.docker_compose.yml
+  when: install_docker_compose
