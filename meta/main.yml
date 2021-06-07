@@ -1,6 +1,6 @@
 galaxy_info:
   role_name: docker
-  author: Muhammed Iqbal
+  author: iquzart
   description: Install docker and docker compose
   license: MIT
   min_ansible_version: 2.9
