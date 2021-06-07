@@ -31,7 +31,7 @@ Example Playbook
 ```
     - hosts: servers
       roles:
-        - ansible-role-docker
+        - iquzart.docker
 ```
 
 License

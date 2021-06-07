@@ -14,3 +14,6 @@
 
 - include: install.docker_compose.yml
   when: install_docker_compose
+
+- name: flush_handlers
+  meta: flush_handlers
