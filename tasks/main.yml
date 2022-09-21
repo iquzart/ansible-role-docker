@@ -1,18 +1,19 @@
 ---
 # tasks file for ansible-role-docker
 
-- include: install.RedHat.yml
+- include_tasks: install.RedHat.yml
   when: ansible_os_family == "RedHat"
 
-- include: install.Ubuntu.yml
+- include_tasks: install.Ubuntu.yml
   when: ansible_os_family == "Debian"
 
-- include: config.swap_limit_capabilities.yml
+- include_tasks: config.swap_limit_capabilities.yml
   when: ansible_os_family == "Debian"
 
-- include: config.users.yml
+- include_tasks: config.users.yml
+  when: setup_user
 
-- include: install.docker_compose.yml
+- include_tasks: install.docker_compose.yml
   when: install_docker_compose
 
 - name: flush_handlers

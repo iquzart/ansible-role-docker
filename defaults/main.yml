@@ -1,11 +1,11 @@
 ---
 # defaults file for ansible-role-docker
-
+setup_user: false
 user_name: appadmin
 user_comment: "Application Admin"
 user_password: "p@ssw0rd"
 
 
 # Docker Compose
-install_docker_compose: True
+install_docker_compose: true
 docker_compose_version: 1.27.4
