@@ -3,7 +3,7 @@
   hosts: 
     - ubuntu2004
     - debian10
-    - rocky8
+    - centos8
   tasks:
     - name: "Include docker"
       include_role:
