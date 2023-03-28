@@ -17,12 +17,12 @@
     - packages
 
 - name: RedHat | Configure repository for Docker CE Stable
-  yum_repository:
-    name: docker-ce-stable
-    description: "Docker CE Stable - $basearch"
-    baseurl: "https://download.docker.com/linux/centos/{{ ansible_distribution_major_version }}/$basearch/stable"
-    gpgcheck: true
-    gpgkey: "https://download.docker.com/linux/centos/gpg"
+  get_url:
+    url: 'https://download.docker.com/linux/centos/docker-ce.repo'
+    dest: '/etc/yum.repos.d/docker-ce.repo'
+    owner: root
+    group: root
+    mode: 0644
   tags:
     - install
     - repository
