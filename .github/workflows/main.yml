@@ -24,5 +24,4 @@ jobs:
 
       - name: Test with molecule
         run: |
-          molecule destroy --all
           molecule test
