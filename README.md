@@ -1,8 +1,10 @@
 Ansible Docker Role
 =========
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-iquzart.docker-blue)](https://galaxy.ansible.com/iquzart/docker)
-![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg?) 
-[![License](https://img.shields.io/:license-mit-blue.svg)](https://badges.mit-license.org)
+![Molecule Test](https://github.com/iquzart/ansible-role-docker/workflows/Molecule%20Test/badge.svg) 
+[![Role Name](https://img.shields.io/ansible/role/52365?label=Role%20Name&logo=ansible&style=flat-square)](https://galaxy.ansible.com/iquzart/docker)
+[![Quality Score](https://img.shields.io/ansible/quality/52365?label=Quality%20Score&logo=ansible&style=flat-square)](https://galaxy.ansible.com/iquzart/docker)
+[![Role Downloads](https://img.shields.io/ansible/role/d/52365?label=Role%20Downloads&logo=ansible&style=flat-square)](https://galaxy.ansible.com/iquzart/docker)
+[![License](https://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://badges.mit-license.org)
 
 
 Ansible role for docker community edition setup
